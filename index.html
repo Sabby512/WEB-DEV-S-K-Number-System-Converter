@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&K Number System Converter</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <img src="binary.gif" id="gif">
+
+    <div id="main">
+        <h2>NUMBER SYSTEM CONVERTER</h2>
+
+    <div id="group">
+        <input type="text" id="value" placeholder="Enter a value">
+        <select id="base">
+            <option value="2">Binary</option>
+            <option value="8">Octal</option>
+            <option value="10">Decimal</option>
+            <option value="16">Hexadecimal</option>
+        </select>
+    </div>
+
+    <div id="button_group">
+        <button onclick="converter()" id="convert">Convert</button>
+        <button onclick="clearResults()" id="clear">Clear</button>
+    </div>
+
+    <input type="text" id="binary" placeholder="Binary" readonly><br><br>
+    <input type="text" id="octal" placeholder="Octal" readonly><br><br>
+    <input type="text" id="decimal" placeholder="Decimal" readonly><br><br>
+    <input type="text" id="hexadecimal" placeholder="Hexadecimal" readonly><br><br>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
