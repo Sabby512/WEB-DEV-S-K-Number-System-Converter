@@ -18,11 +18,12 @@ function converter() {
     if (value === "") {
         clearResults();
         return;
-    }
+    } if (base === 16 && !/^[0-9, A-F, a-f]+$/.test(value)){alert("Invalid! Must input 0-9 and A-F only"); return; }
     const dec = parseInt(value, base);
     if (isNaN(dec)) {
         alert("Invalid number for selected base");
         return;
     }
     allbase(dec);
+
 }
