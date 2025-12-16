@@ -18,12 +18,19 @@ function converter() {
     if (value === "") {
         clearResults();
         return;
-    } if (base === 16 && !/^[0-9, A-F, a-f]+$/.test(value)){alert("Invalid! Must input 0-9 and A-F only"); return; }
-    const dec = parseInt(value, base);
-    if (isNaN(dec)) {
-        alert("Invalid number for selected base");
+    } if (base === 2 && !/^[0-1]+$/.test(value)) {
+        alert("Invalid! Binary must contain only 0 and 1");
+    return; 
+    } if (base === 8 && !/^[0-7]+$/.test(value)) {
+        alert("Invalid! Octal must contain digits 0 to 7 only");
         return;
-    }
-    allbase(dec);
-
+    } if (base === 16 && !/^[0-9, A-F, a-f]+$/.test(value)) {
+        alert("Invalid! Hexadecimal must contain only 0-9 and A-F only"); 
+        return; 
+    } if (base === 10 && !/^[0-9]+$/.test(value)) {
+        alert("Invalid! Decimal must contain digits 0 to 9 only");
+        return;
+        
+        const dec = parseInt(value, base);
+        allbase(dec);
 }
